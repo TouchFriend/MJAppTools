@@ -107,7 +107,9 @@
     BOOL bigEndian = (header.magic == FAT_CIGAM);
     
     // 架构数量
-    uint32_t archCount = MJEndianConvert(bigEndian, header.nfat_arch);
+//    uint32_t archCount = MJEndianConvert(bigEndian, header.nfat_arch);
+    // 临时处理Segmentation fault: 11
+    uint32_t archCount = 2;
     NSMutableArray *machOs = [NSMutableArray arrayWithCapacity:archCount];
     
     for (int i = 0; i < archCount; i++) {
