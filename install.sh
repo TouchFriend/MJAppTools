@@ -1,0 +1,1 @@
+make && scp -P 10010 Release/MJAppTools root@127.0.0.1:/usr/bin/
